@@ -33,5 +33,4 @@ echo " Client Name : $user"
 echo " Expired On  : $exp"
 echo " =========================="
 echo -e ""
-echo -e "Deleted by \e[1;33;44m Semar \e[0m"
 
