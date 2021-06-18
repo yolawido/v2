@@ -1,0 +1,21 @@
+#!/bin/bash
+
+clear
+echo -e "================================================="
+echo -e "# Script Auto Install V2RAY                     #"
+echo -e "#-----------------------------------------------#"
+echo -e "# For Debian 9 & 10 Buster 64 bit               #"
+echo -e "# For VPS with KVM and VMWare virtualization    #"
+echo -e "# Modified By Semar @lurahkudapawana            #"
+echo -e "#-----------------------------------------------#"
+echo -e "# Thanks To                                     #"
+echo -e "#-----------------------------------------------#"
+echo -e "# Horass for original script                    #"
+echo -e "# etc                                           #"
+echo -e "# etc                                           #"
+echo -e "# etc                                           #"
+echo -e "# etc                                           #"
+echo -e "# etc                                           #"
+echo -e "#                                               #"
+echo -e "#-----------------------------------------------#"
+echo -e "================================================="
