@@ -134,7 +134,7 @@ cat> /etc/v2ray/config1.json << END
           {
             "id": "${uuid}",
             "alterId": 64
-#tls
+#tls1
           }
         ]
       },
@@ -319,7 +319,7 @@ cat> /etc/v2ray/none1.json << END
           {
             "id": "${uuid}",
             "alterId": 64
-#none
+#none1
           }
         ]
       },
