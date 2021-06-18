@@ -38,5 +38,3 @@ echo "other";
 echo "$oth";
 echo "-------------------------------"
 rm -rf /tmp/other.txt
-echo -e ""
-echo -e "Checked by \e[1;33;44m Semar \e[0m"
