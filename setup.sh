@@ -24,7 +24,7 @@ mkdir /var/lib/premium-script;
 echo "Enter the VPS Subdomain Hostname, REQUIRED aka WAJIB"
 read -p "Hostname / Domain: " host
 echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
-wget https://raw.githubusercontent.com/di2nk/v2/main/ins-vt.sh && chmod +x ins-vt.sh && sed -i -e 's/\r$//' ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget https://raw.githubusercontent.com/yolawido/v2/main/ins-vt.sh && chmod +x ins-vt.sh && sed -i -e 's/\r$//' ins-vt.sh && screen -S v2ray ./ins-vt.sh
 rm -f /root/ins-vt.sh
 rm -f /root/go.sh
 history -c
