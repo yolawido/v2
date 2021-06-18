@@ -1,11 +1,11 @@
 #!/bin/bash
 #USE YOUR OWN EMAIL & CLOUDFLARE KEY
 apt install jq curl -y
-DOMAIN=semar.tech
+DOMAIN=nyoih.ga
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.semar.tech
-CF_ID=simonwest1880@gmail.com
-CF_KEY=b78b76835a9a796552ac7d0dc596a4c2296b5
+SUB_DOMAIN=${sub}.nyoih.ga
+CF_ID=astrimaulidiyah@outlook.com
+CF_KEY=39576646dd867b23b622ace41e9406973a3b9
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${SUB_DOMAIN}..."
