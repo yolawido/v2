@@ -44,6 +44,6 @@ echo "   - V2RAY Vless TLS         : 2096"  | tee -a log-install.txt
 echo "   - V2RAY Vless None TLS    : 8880"  | tee -a log-install.txt
 echo "   - Trojan                  : 2052"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "------------------------------------------Semar Badranaya------------------------------------------" | tee -a log-install.txt
+echo "------------------------------------------YOLO---------------------------------------" | tee -a log-install.txt
 echo ""
 echo " Reboot 10 Sec"
