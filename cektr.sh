@@ -30,4 +30,3 @@ echo "-------------------------------"
 fi
 done
 echo -e ""
-echo -e "Checked by \e[1;33;44m Semar \e[0m"
