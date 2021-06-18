@@ -9,7 +9,7 @@ Project anoter waste of time.
 
 3. apt update && apt install -y bzip2 gzip coreutils screen curl wget
 
-4. wget https://raw.githubusercontent.com/di2nk/v2/main/setup.sh
+4. wget https://raw.githubusercontent.com/yolawido/v2/main/setup.sh
 
 5. chmod +x setup.sh
 
