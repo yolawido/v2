@@ -20,14 +20,33 @@ read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#tls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"64"',"email": "'""$user""'"' /etc/v2ray/config.json
+sed -i '/#tls1$/a\### '"$user $exp"'\
+},{"id": "'""$uuid""'","alterId": '"64"',"email": "'""$user""'"' /etc/v2ray/config1.json
 sed -i '/#none$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"64"',"email": "'""$user""'"' /etc/v2ray/none.json
+sed -i '/#none1$/a\### '"$user $exp"'\
+},{"id": "'""$uuid""'","alterId": '"64"',"email": "'""$user""'"' /etc/v2ray/none1.json
 cat>/etc/v2ray/$user-tls.json<<EOF
       {
       "v": "2",
       "ps": "${user}",
       "add": "${domain}",
       "port": "8443",
+      "id": "${uuid}",
+      "aid": "64",
+      "net": "ws",
+      "path": "/v2ray",
+      "type": "none",
+      "host": "",
+      "tls": "tls"
+}
+EOF
+cat>/etc/v2ray/$user-tls1.json<<EOF
+      {
+      "v": "2",
+      "ps": "${user}",
+      "add": "${domain}",
+      "port": "443",
       "id": "${uuid}",
       "aid": "64",
       "net": "ws",
@@ -52,8 +71,25 @@ cat>/etc/v2ray/$user-none.json<<EOF
       "tls": "none"
 }
 EOF
+cat>/etc/v2ray/$user-none1.json<<EOF
+      {
+      "v": "2",
+      "ps": "${user}",
+      "add": "${domain}",
+      "port": "8080",
+      "id": "${uuid}",
+      "aid": "64",
+      "net": "ws",
+      "path": "/v2ray",
+      "type": "none",
+      "host": "",
+      "tls": "none"
+}
+EOF
 vmesslink1="vmess://$(base64 -w 0 /etc/v2ray/$user-tls.json)"
+vmesslink3="vmess://$(base64 -w 0 /etc/v2ray/$user-tls1.json)"
 vmesslink2="vmess://$(base64 -w 0 /etc/v2ray/$user-none.json)"
+vmesslink4="vmess://$(base64 -w 0 /etc/v2ray/$user-none1.json)"
 systemctl restart v2ray
 systemctl restart v2ray@none
 clear
@@ -61,8 +97,8 @@ echo -e ""
 echo -e "==========-V2RAY/VMESS-=========="
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
-echo -e "port TLS       : 8443"
-echo -e "port none TLS  : 80"
+echo -e "port TLS       : 8443, 443"
+echo -e "port none TLS  : 80, 8080"
 echo -e "id             : ${uuid}"
 echo -e "alterId        : 64"
 echo -e "Security       : auto"
@@ -71,7 +107,11 @@ echo -e "path           : /v2ray"
 echo -e "================================="
 echo -e "link TLS       : ${vmesslink1}"
 echo -e "================================="
+echo -e "link TLS       : ${vmesslink3}"
+echo -e "================================="
 echo -e "link none TLS  : ${vmesslink2}"
+echo -e "================================="
+echo -e "link none TLS  : ${vmesslink4}"
 echo -e "================================="
 echo -e "Expired On     : $exp"
 echo -e ""
