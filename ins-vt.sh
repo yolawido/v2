@@ -688,6 +688,8 @@ netfilter-persistent reload
 systemctl daemon-reload
 systemctl enable v2ray@none.service
 systemctl start v2ray@none.service
+systemctl enable v2ray@none1.service
+systemctl start v2ray@none1.service
 systemctl enable v2ray@vless.service
 systemctl start v2ray@vless.service
 systemctl enable v2ray@vnone.service
