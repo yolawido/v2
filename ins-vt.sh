@@ -312,7 +312,7 @@ cat> /etc/v2ray/none1.json << END
   },
   "inbounds": [
     {
-      "port": 8080,
+      "port": 2086,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -666,6 +666,7 @@ cat> /etc/v2ray/trojan.json <<END
 }
 END
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8443 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2086 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2096 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2052 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8880 -j ACCEPT
@@ -673,6 +674,7 @@ iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 443 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8443 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2086 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2096 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2052 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8880 -j ACCEPT
