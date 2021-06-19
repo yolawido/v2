@@ -76,7 +76,7 @@ cat>/etc/v2ray/$user-none1.json<<EOF
       "v": "2",
       "ps": "${user}",
       "add": "${domain}",
-      "port": "8080",
+      "port": "2086",
       "id": "${uuid}",
       "aid": "64",
       "net": "ws",
@@ -98,7 +98,7 @@ echo -e "==========-V2RAY/VMESS-=========="
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
 echo -e "port TLS       : 8443, 443"
-echo -e "port none TLS  : 80, 8080"
+echo -e "port none TLS  : 80, 2086"
 echo -e "id             : ${uuid}"
 echo -e "alterId        : 64"
 echo -e "Security       : auto"
